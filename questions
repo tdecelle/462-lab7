@@ -1,0 +1,29 @@
+URL for Rulesets
+https://github.com/tdecelle/462-lab7
+
+Diagram
+
+Manager Pico -|- Sensor Picos
+			  v
+			  Sensor Picos
+
+1.
+I could have a malevolent pico subscribe to a sensor and it would just accept it.
+
+2.
+My set up wouldn't allow it because I only send to the first manager pico in my list of subscriptions, but I could change it so it sends to all manager subscriptions.
+
+3.
+I would create new subscriptions with different Txs for each type of sensor (e.g. pressure, humidity, air quality, etc.). With these subscriptions, I could add more functions to read the new types of sensors.
+
+4.
+I would make a subscription for each floor with a Tx role named after that floor. I could then make functions to get the temperatures for each floor by just quering all of the picos in a subscription. I could also adjust the notification so it includes the floor when raising the threshold event or I could search for the pico in each of my subscriptions.
+
+5.
+A sensor pico could belong to more than one collection by having a different subscription. My set up would only send the violation to the first collection, but I could change it to send to multiple subscriptions or all picos in a subscription.
+
+6.
+I created a new set since it seemed to be a new set of functionality and needed access to certain keys. 
+
+7.
+I only added one rule since I felt the sensor pico should cover the role of filtering its own temperatures into violations. I felt the only responsibility which moved was controlling sms notifications.
